@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0fae9b"><meta name="description" content="منصة مشاركة مفاتيح نسك">
+  <title>مفاتيح نسك | مشاركة المفاتيح</title><link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="/"><span class="brand-mark">N</span><span>مفاتيح <b>نسك</b></span></a><span class="top-note">مجتمع مشاركة المفاتيح</span></header>
+<main class="wrap">
+  <section class="hero"><div><span class="eyebrow">منصة مجتمعية</span><h1>مفاتيح نسك، <span>بمشاركة الجميع</span></h1><p>انسخ مفتاحًا متاحًا أو شارك مفتاحًا ليستفيد منه الآخرون.</p></div><div class="hero-icon" aria-hidden="true">↗</div></section>
+  <section class="stats"><article class="stat"><span>المفاتيح المتاحة</span><strong id="count">—</strong></article><article class="stat"><span>مفاتيح شاركها المجتمع</span><strong id="communityCount">—</strong></article><article class="stat"><span>نسختها على هذا الجهاز</span><strong id="usedCount">0</strong></article></section>
+  <section class="panel"><div class="section-head"><div><h2>المفاتيح المتاحة</h2><p>المفاتيح التي نسختها تختفي من قائمتك على هذا الجهاز فقط.</p></div><button class="btn btn-soft" id="refreshBtn">↻ تحديث</button></div>
+    <div class="search-wrap"><span>⌕</span><input id="search" type="search" placeholder="ابحث داخل المفاتيح..." autocomplete="off"></div>
+    <div id="keys" class="keys-list"><div class="loading">جارٍ تحميل المفاتيح...</div></div>
+    <div class="list-footer"><span id="listInfo">—</span><button class="text-btn" id="showUsed">إظهار المفاتيح التي نسختها</button></div>
+  </section>
+  <section class="panel share-panel"><div class="section-head"><div><h2>مشاركة مفتاح</h2><p>أضف مفتاحًا ليستفيد منه جميع المستخدمين.</p></div><span class="share-icon">＋</span></div>
+    <form id="shareForm"><label for="newCode">المفتاح</label><div class="input-row"><input id="newCode" maxlength="11" placeholder="NG-XXXXXXXX" autocapitalize="characters" required><button class="btn btn-primary" type="submit">مشاركة المفتاح</button></div><small>الصيغة المطلوبة: NG- متبوعة بـ 8 أحرف أو أرقام.</small><div id="shareMessage" class="message" role="status"></div></form>
+  </section>
+  <details class="admin panel"><summary>إدارة واستيراد المفاتيح</summary><p>هذه المنطقة مخصصة لصاحب الموقع. أدخل رمز الإدارة لاستيراد ملف TXT أو CSV أو تصدير قاعدة المفاتيح.</p><label for="adminToken">رمز الإدارة</label><input id="adminToken" type="password" placeholder="ADMIN_TOKEN" autocomplete="off"><label for="bulkText">الصق الأكواد هنا (كل كود في سطر)</label><textarea id="bulkText" rows="5" placeholder="NG-XXXXXXXX&#10;NG-XXXXXXXX"></textarea><label for="bulkFile">أو اختر ملف TXT / CSV</label><input id="bulkFile" type="file" accept=".txt,.csv"><div class="admin-actions"><button class="btn btn-primary" id="importBtn">استيراد الملف</button><button class="btn btn-soft" id="exportBtn">تصدير CSV</button></div><div id="adminMessage" class="message" role="status"></div></details>
+  <footer>مفاتيح نسك · مشاركة مجتمعية مستقلة</footer>
+</main>
+<div id="toast" class="toast" role="status"></div><script src="/app.js" defer></script>
+</body></html>
